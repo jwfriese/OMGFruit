@@ -12,7 +12,18 @@
 		7BA48F631DD77364008BDE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F611DD77364008BDE19 /* Main.storyboard */; };
 		7BA48F651DD77364008BDE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F641DD77364008BDE19 /* Assets.xcassets */; };
 		7BA48F681DD77364008BDE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F661DD77364008BDE19 /* LaunchScreen.storyboard */; };
+		7BA48F761DD774BF008BDE19 /* OMGFruitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48F751DD774BF008BDE19 /* OMGFruitTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7BA48F781DD774BF008BDE19 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7BA48F521DD77364008BDE19 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7BA48F591DD77364008BDE19;
+			remoteInfo = OMGFruit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		7BA48F5A1DD77364008BDE19 /* OMGFruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMGFruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -22,10 +33,20 @@
 		7BA48F641DD77364008BDE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7BA48F671DD77364008BDE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BA48F691DD77364008BDE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BA48F731DD774BF008BDE19 /* OMGFruitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OMGFruitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BA48F751DD774BF008BDE19 /* OMGFruitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMGFruitTests.swift; sourceTree = "<group>"; };
+		7BA48F771DD774BF008BDE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		7BA48F571DD77364008BDE19 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7BA48F701DD774BF008BDE19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				7BA48F5C1DD77364008BDE19 /* OMGFruit */,
+				7BA48F741DD774BF008BDE19 /* OMGFruitTests */,
 				7BA48F5B1DD77364008BDE19 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -47,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				7BA48F5A1DD77364008BDE19 /* OMGFruit.app */,
+				7BA48F731DD774BF008BDE19 /* OMGFruitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -62,6 +85,15 @@
 				7BA48F691DD77364008BDE19 /* Info.plist */,
 			);
 			path = OMGFruit;
+			sourceTree = "<group>";
+		};
+		7BA48F741DD774BF008BDE19 /* OMGFruitTests */ = {
+			isa = PBXGroup;
+			children = (
+				7BA48F751DD774BF008BDE19 /* OMGFruitTests.swift */,
+				7BA48F771DD774BF008BDE19 /* Info.plist */,
+			);
+			path = OMGFruitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +116,24 @@
 			productReference = 7BA48F5A1DD77364008BDE19 /* OMGFruit.app */;
 			productType = "com.apple.product-type.application";
 		};
+		7BA48F721DD774BF008BDE19 /* OMGFruitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7BA48F7C1DD774BF008BDE19 /* Build configuration list for PBXNativeTarget "OMGFruitTests" */;
+			buildPhases = (
+				7BA48F6F1DD774BF008BDE19 /* Sources */,
+				7BA48F701DD774BF008BDE19 /* Frameworks */,
+				7BA48F711DD774BF008BDE19 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7BA48F791DD774BF008BDE19 /* PBXTargetDependency */,
+			);
+			name = OMGFruitTests;
+			productName = OMGFruitTests;
+			productReference = 7BA48F731DD774BF008BDE19 /* OMGFruitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -97,6 +147,11 @@
 					7BA48F591DD77364008BDE19 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
+					};
+					7BA48F721DD774BF008BDE19 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 7BA48F591DD77364008BDE19;
 					};
 				};
 			};
@@ -114,6 +169,7 @@
 			projectRoot = "";
 			targets = (
 				7BA48F591DD77364008BDE19 /* OMGFruit */,
+				7BA48F721DD774BF008BDE19 /* OMGFruitTests */,
 			);
 		};
 /* End PBXProject section */
@@ -129,6 +185,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7BA48F711DD774BF008BDE19 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -141,7 +204,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7BA48F6F1DD774BF008BDE19 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7BA48F761DD774BF008BDE19 /* OMGFruitTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7BA48F791DD774BF008BDE19 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7BA48F591DD77364008BDE19 /* OMGFruit */;
+			targetProxy = 7BA48F781DD774BF008BDE19 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7BA48F611DD77364008BDE19 /* Main.storyboard */ = {
@@ -203,7 +282,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -247,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -280,6 +359,32 @@
 			};
 			name = Release;
 		};
+		7BA48F7A1DD774BF008BDE19 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OMGFruitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.OMGFruitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OMGFruit.app/OMGFruit";
+			};
+			name = Debug;
+		};
+		7BA48F7B1DD774BF008BDE19 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = OMGFruitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.OMGFruitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OMGFruit.app/OMGFruit";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -297,6 +402,15 @@
 			buildConfigurations = (
 				7BA48F6D1DD77364008BDE19 /* Debug */,
 				7BA48F6E1DD77364008BDE19 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7BA48F7C1DD774BF008BDE19 /* Build configuration list for PBXNativeTarget "OMGFruitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7BA48F7A1DD774BF008BDE19 /* Debug */,
+				7BA48F7B1DD774BF008BDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
