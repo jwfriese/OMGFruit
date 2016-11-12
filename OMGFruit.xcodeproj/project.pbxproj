@@ -13,6 +13,9 @@
 		7BA48F651DD77364008BDE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F641DD77364008BDE19 /* Assets.xcassets */; };
 		7BA48F681DD77364008BDE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F661DD77364008BDE19 /* LaunchScreen.storyboard */; };
 		7BA48F761DD774BF008BDE19 /* OMGFruitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48F751DD774BF008BDE19 /* OMGFruitTests.swift */; };
+		7BA48F811DD77684008BDE19 /* Fleet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA48F7E1DD77684008BDE19 /* Fleet.framework */; };
+		7BA48F821DD77684008BDE19 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA48F7F1DD77684008BDE19 /* Nimble.framework */; };
+		7BA48F831DD77684008BDE19 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA48F801DD77684008BDE19 /* Quick.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,9 @@
 		7BA48F731DD774BF008BDE19 /* OMGFruitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OMGFruitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA48F751DD774BF008BDE19 /* OMGFruitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMGFruitTests.swift; sourceTree = "<group>"; };
 		7BA48F771DD774BF008BDE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7BA48F7E1DD77684008BDE19 /* Fleet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fleet.framework; path = Carthage/Build/iOS/Fleet.framework; sourceTree = "<group>"; };
+		7BA48F7F1DD77684008BDE19 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
+		7BA48F801DD77684008BDE19 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +56,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7BA48F811DD77684008BDE19 /* Fleet.framework in Frameworks */,
+				7BA48F821DD77684008BDE19 /* Nimble.framework in Frameworks */,
+				7BA48F831DD77684008BDE19 /* Quick.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,6 +71,7 @@
 				7BA48F5C1DD77364008BDE19 /* OMGFruit */,
 				7BA48F741DD774BF008BDE19 /* OMGFruitTests */,
 				7BA48F5B1DD77364008BDE19 /* Products */,
+				7BA48F7D1DD77684008BDE19 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,6 +106,16 @@
 			path = OMGFruitTests;
 			sourceTree = "<group>";
 		};
+		7BA48F7D1DD77684008BDE19 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7BA48F7E1DD77684008BDE19 /* Fleet.framework */,
+				7BA48F7F1DD77684008BDE19 /* Nimble.framework */,
+				7BA48F801DD77684008BDE19 /* Quick.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -123,6 +143,8 @@
 				7BA48F6F1DD774BF008BDE19 /* Sources */,
 				7BA48F701DD774BF008BDE19 /* Frameworks */,
 				7BA48F711DD774BF008BDE19 /* Resources */,
+				7BA48F851DD776C2008BDE19 /* Copy Carthage frameworks */,
+				7BA48F861DD77720008BDE19 /* Create Storyboard info file */,
 			);
 			buildRules = (
 			);
@@ -193,6 +215,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		7BA48F851DD776C2008BDE19 /* Copy Carthage frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/Fleet.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Nimble.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Quick.framework",
+			);
+			name = "Copy Carthage frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks";
+		};
+		7BA48F861DD77720008BDE19 /* Create Storyboard info file */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Create Storyboard info file";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = $PROJECT_DIR/Carthage/Build/iOS/Fleet.framework/copy_storyboard_info_files.sh;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		7BA48F561DD77364008BDE19 /* Sources */ = {
@@ -363,6 +419,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OMGFruitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.OMGFruitTests;
@@ -376,6 +436,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = OMGFruitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.OMGFruitTests;
