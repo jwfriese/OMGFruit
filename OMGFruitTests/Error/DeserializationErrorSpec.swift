@@ -16,8 +16,8 @@ class DeserializationErrorSpec: QuickSpec {
 
             describe("Equality operator") {
                 context("When the details and types of the DeserializationError objects are equal") {
-                    let errorOne = DeserializationError(details: "error", type: .invalidInputFormat)
-                    let errorTwo = DeserializationError(details: "error", type: .invalidInputFormat)
+                    let errorOne = DeserializationError(details: "error", type: .invalidDataFormat)
+                    let errorTwo = DeserializationError(details: "error", type: .invalidDataFormat)
 
                     it("returns true") {
                         expect(errorOne).to(equal(errorTwo))
@@ -25,7 +25,7 @@ class DeserializationErrorSpec: QuickSpec {
                 }
 
                 context("When the details of the DeserializationError objects are equal and types are different") {
-                    let errorOne = DeserializationError(details: "error", type: .invalidInputFormat)
+                    let errorOne = DeserializationError(details: "error", type: .invalidDataFormat)
                     let errorTwo = DeserializationError(details: "error", type: .missingRequiredData)
 
                     it("returns false") {
@@ -34,8 +34,8 @@ class DeserializationErrorSpec: QuickSpec {
                 }
 
                 context("When the details of the DeserializationError objects are different and types are equal") {
-                    let errorOne = DeserializationError(details: "error", type: .invalidInputFormat)
-                    let errorTwo = DeserializationError(details: "some other error", type: .invalidInputFormat)
+                    let errorOne = DeserializationError(details: "error", type: .invalidDataFormat)
+                    let errorTwo = DeserializationError(details: "some other error", type: .invalidDataFormat)
 
                     it("returns false") {
                         expect(errorOne).toNot(equal(errorTwo))
@@ -43,7 +43,7 @@ class DeserializationErrorSpec: QuickSpec {
                 }
 
                 context("When the details and types of the DeserializationError objects are different") {
-                    let errorOne = DeserializationError(details: "error", type: .invalidInputFormat)
+                    let errorOne = DeserializationError(details: "error", type: .invalidDataFormat)
                     let errorTwo = DeserializationError(details: "some other error", type: .missingRequiredData)
 
                     it("returns false") {

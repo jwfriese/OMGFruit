@@ -118,7 +118,7 @@ class FruitServiceSpec: QuickSpec {
                             return
                         }
 
-                        mockFruitDeserializer.errorToReturn = DeserializationError(details: "error details", type: .invalidInputFormat)
+                        mockFruitDeserializer.errorToReturn = DeserializationError(details: "error details", type: .invalidDataFormat)
 
                         let invalidBuildsData = "invalid fruit data".data(using: String.Encoding.utf8)
                         completion(invalidBuildsData, HTTPResponseInfoImpl(statusCode: 200), nil)
@@ -134,7 +134,7 @@ class FruitServiceSpec: QuickSpec {
                     }
 
                     it("calls its completion handler with the error that comes from the deserializer") {
-                        expect(returnedError as? DeserializationError).to(equal(DeserializationError(details: "error details", type: .invalidInputFormat)))
+                        expect(returnedError as? DeserializationError).to(equal(DeserializationError(details: "error details", type: .invalidDataFormat)))
                     }
                 }
 

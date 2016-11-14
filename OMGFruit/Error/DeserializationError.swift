@@ -1,14 +1,14 @@
 enum DeserializationErrorType {
     case missingRequiredData
-    case invalidInputFormat
+    case invalidDataFormat
     case typeMismatch
 
     func description() -> String {
         switch(self) {
         case .missingRequiredData:
             return "MissingRequiredData"
-        case .invalidInputFormat:
-            return "InvalidInputFormat"
+        case .invalidDataFormat:
+            return "InvalidDataFormat"
         case .typeMismatch:
             return "TypeMismatch"
         }
