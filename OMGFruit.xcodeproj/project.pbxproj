@@ -7,15 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B29F3E81DD8D419008EA836 /* FruitServiceSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29F3E71DD8D419008EA836 /* FruitServiceSpec.swift */; };
+		7B29F3EA1DD8D906008EA836 /* DeserializationError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29F3E91DD8D906008EA836 /* DeserializationError.swift */; };
+		7B29F3EC1DD8D911008EA836 /* DeserializationErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29F3EB1DD8D911008EA836 /* DeserializationErrorSpec.swift */; };
+		7B29F3EE1DD8D944008EA836 /* FruitDeserializer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29F3ED1DD8D944008EA836 /* FruitDeserializer.swift */; };
+		7B29F3F01DD8DF90008EA836 /* apple.png in Resources */ = {isa = PBXBuildFile; fileRef = 7B29F3EF1DD8DF90008EA836 /* apple.png */; };
+		7B29F3F21DD8E21B008EA836 /* FruitDeserializerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B29F3F11DD8E21B008EA836 /* FruitDeserializerSpec.swift */; };
 		7BA48F5E1DD77364008BDE19 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48F5D1DD77364008BDE19 /* AppDelegate.swift */; };
-		7BA48F601DD77364008BDE19 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48F5F1DD77364008BDE19 /* ViewController.swift */; };
-		7BA48F631DD77364008BDE19 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F611DD77364008BDE19 /* Main.storyboard */; };
 		7BA48F651DD77364008BDE19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F641DD77364008BDE19 /* Assets.xcassets */; };
-		7BA48F681DD77364008BDE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F661DD77364008BDE19 /* LaunchScreen.storyboard */; };
-		7BA48F761DD774BF008BDE19 /* OMGFruitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48F751DD774BF008BDE19 /* OMGFruitTests.swift */; };
 		7BA48F811DD77684008BDE19 /* Fleet.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA48F7E1DD77684008BDE19 /* Fleet.framework */; };
 		7BA48F821DD77684008BDE19 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA48F7F1DD77684008BDE19 /* Nimble.framework */; };
 		7BA48F831DD77684008BDE19 /* Quick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BA48F801DD77684008BDE19 /* Quick.framework */; };
+		7BA48F931DD77D4F008BDE19 /* FruitViewControllerSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48F921DD77D4F008BDE19 /* FruitViewControllerSpec.swift */; };
+		7BA48F9C1DD77D90008BDE19 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48F9B1DD77D90008BDE19 /* LaunchScreen.storyboard */; };
+		7BA48FA21DD77E6D008BDE19 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FA01DD77E6D008BDE19 /* HTTPClient.swift */; };
+		7BA48FA31DD77E6D008BDE19 /* HTTPResponseInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FA11DD77E6D008BDE19 /* HTTPResponseInfo.swift */; };
+		7BA48FA71DD77EC3008BDE19 /* HTTPClientSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FA51DD77EC3008BDE19 /* HTTPClientSpec.swift */; };
+		7BA48FA81DD77EC3008BDE19 /* HTTPResponseInfoImplSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FA61DD77EC3008BDE19 /* HTTPResponseInfoImplSpec.swift */; };
+		7BA48FAD1DD77FC3008BDE19 /* BasicError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FAB1DD77FC3008BDE19 /* BasicError.swift */; };
+		7BA48FAE1DD77FC3008BDE19 /* OMGError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FAC1DD77FC3008BDE19 /* OMGError.swift */; };
+		7BA48FB01DD77FCE008BDE19 /* BasicErrorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FAF1DD77FCE008BDE19 /* BasicErrorSpec.swift */; };
+		7BA48FB71DD78574008BDE19 /* Fruit.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BA48FB31DD78574008BDE19 /* Fruit.storyboard */; };
+		7BA48FB81DD78574008BDE19 /* Fruit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FB41DD78574008BDE19 /* Fruit.swift */; };
+		7BA48FB91DD78574008BDE19 /* FruitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FB51DD78574008BDE19 /* FruitService.swift */; };
+		7BA48FBA1DD78574008BDE19 /* FruitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BA48FB61DD78574008BDE19 /* FruitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,19 +44,34 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B29F3E71DD8D419008EA836 /* FruitServiceSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitServiceSpec.swift; sourceTree = "<group>"; };
+		7B29F3E91DD8D906008EA836 /* DeserializationError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeserializationError.swift; sourceTree = "<group>"; };
+		7B29F3EB1DD8D911008EA836 /* DeserializationErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeserializationErrorSpec.swift; sourceTree = "<group>"; };
+		7B29F3ED1DD8D944008EA836 /* FruitDeserializer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDeserializer.swift; sourceTree = "<group>"; };
+		7B29F3EF1DD8DF90008EA836 /* apple.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = apple.png; sourceTree = "<group>"; };
+		7B29F3F11DD8E21B008EA836 /* FruitDeserializerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitDeserializerSpec.swift; sourceTree = "<group>"; };
 		7BA48F5A1DD77364008BDE19 /* OMGFruit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OMGFruit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BA48F5D1DD77364008BDE19 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7BA48F5F1DD77364008BDE19 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		7BA48F621DD77364008BDE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BA48F641DD77364008BDE19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		7BA48F671DD77364008BDE19 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7BA48F691DD77364008BDE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BA48F731DD774BF008BDE19 /* OMGFruitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OMGFruitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BA48F751DD774BF008BDE19 /* OMGFruitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OMGFruitTests.swift; sourceTree = "<group>"; };
 		7BA48F771DD774BF008BDE19 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7BA48F7E1DD77684008BDE19 /* Fleet.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Fleet.framework; path = Carthage/Build/iOS/Fleet.framework; sourceTree = "<group>"; };
 		7BA48F7F1DD77684008BDE19 /* Nimble.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nimble.framework; path = Carthage/Build/iOS/Nimble.framework; sourceTree = "<group>"; };
 		7BA48F801DD77684008BDE19 /* Quick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quick.framework; path = Carthage/Build/iOS/Quick.framework; sourceTree = "<group>"; };
+		7BA48F921DD77D4F008BDE19 /* FruitViewControllerSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitViewControllerSpec.swift; sourceTree = "<group>"; };
+		7BA48F9B1DD77D90008BDE19 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7BA48FA01DD77E6D008BDE19 /* HTTPClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
+		7BA48FA11DD77E6D008BDE19 /* HTTPResponseInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseInfo.swift; sourceTree = "<group>"; };
+		7BA48FA51DD77EC3008BDE19 /* HTTPClientSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPClientSpec.swift; sourceTree = "<group>"; };
+		7BA48FA61DD77EC3008BDE19 /* HTTPResponseInfoImplSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HTTPResponseInfoImplSpec.swift; sourceTree = "<group>"; };
+		7BA48FAB1DD77FC3008BDE19 /* BasicError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicError.swift; sourceTree = "<group>"; };
+		7BA48FAC1DD77FC3008BDE19 /* OMGError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OMGError.swift; sourceTree = "<group>"; };
+		7BA48FAF1DD77FCE008BDE19 /* BasicErrorSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicErrorSpec.swift; sourceTree = "<group>"; };
+		7BA48FB31DD78574008BDE19 /* Fruit.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Fruit.storyboard; sourceTree = "<group>"; };
+		7BA48FB41DD78574008BDE19 /* Fruit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fruit.swift; sourceTree = "<group>"; };
+		7BA48FB51DD78574008BDE19 /* FruitService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitService.swift; sourceTree = "<group>"; };
+		7BA48FB61DD78574008BDE19 /* FruitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,10 +118,11 @@
 			isa = PBXGroup;
 			children = (
 				7BA48F5D1DD77364008BDE19 /* AppDelegate.swift */,
-				7BA48F5F1DD77364008BDE19 /* ViewController.swift */,
-				7BA48F611DD77364008BDE19 /* Main.storyboard */,
+				7BA48FA91DD77F9F008BDE19 /* Error */,
+				7BA48F941DD77D53008BDE19 /* Fruit */,
+				7BA48F9F1DD77E5D008BDE19 /* HTTP */,
+				7BA48F9B1DD77D90008BDE19 /* LaunchScreen.storyboard */,
 				7BA48F641DD77364008BDE19 /* Assets.xcassets */,
-				7BA48F661DD77364008BDE19 /* LaunchScreen.storyboard */,
 				7BA48F691DD77364008BDE19 /* Info.plist */,
 			);
 			path = OMGFruit;
@@ -100,7 +131,10 @@
 		7BA48F741DD774BF008BDE19 /* OMGFruitTests */ = {
 			isa = PBXGroup;
 			children = (
-				7BA48F751DD774BF008BDE19 /* OMGFruitTests.swift */,
+				7BA48FBB1DD8CBA0008BDE19 /* TestImages */,
+				7BA48FAA1DD77FAD008BDE19 /* Error */,
+				7BA48F911DD77D43008BDE19 /* Fruit */,
+				7BA48FA41DD77E73008BDE19 /* HTTP */,
 				7BA48F771DD774BF008BDE19 /* Info.plist */,
 			);
 			path = OMGFruitTests;
@@ -114,6 +148,73 @@
 				7BA48F801DD77684008BDE19 /* Quick.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7BA48F911DD77D43008BDE19 /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				7B29F3E71DD8D419008EA836 /* FruitServiceSpec.swift */,
+				7BA48F921DD77D4F008BDE19 /* FruitViewControllerSpec.swift */,
+				7B29F3F11DD8E21B008EA836 /* FruitDeserializerSpec.swift */,
+			);
+			path = Fruit;
+			sourceTree = "<group>";
+		};
+		7BA48F941DD77D53008BDE19 /* Fruit */ = {
+			isa = PBXGroup;
+			children = (
+				7BA48FB31DD78574008BDE19 /* Fruit.storyboard */,
+				7BA48FB41DD78574008BDE19 /* Fruit.swift */,
+				7B29F3ED1DD8D944008EA836 /* FruitDeserializer.swift */,
+				7BA48FB51DD78574008BDE19 /* FruitService.swift */,
+				7BA48FB61DD78574008BDE19 /* FruitViewController.swift */,
+			);
+			path = Fruit;
+			sourceTree = "<group>";
+		};
+		7BA48F9F1DD77E5D008BDE19 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				7BA48FA01DD77E6D008BDE19 /* HTTPClient.swift */,
+				7BA48FA11DD77E6D008BDE19 /* HTTPResponseInfo.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		7BA48FA41DD77E73008BDE19 /* HTTP */ = {
+			isa = PBXGroup;
+			children = (
+				7BA48FA51DD77EC3008BDE19 /* HTTPClientSpec.swift */,
+				7BA48FA61DD77EC3008BDE19 /* HTTPResponseInfoImplSpec.swift */,
+			);
+			path = HTTP;
+			sourceTree = "<group>";
+		};
+		7BA48FA91DD77F9F008BDE19 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				7BA48FAB1DD77FC3008BDE19 /* BasicError.swift */,
+				7B29F3E91DD8D906008EA836 /* DeserializationError.swift */,
+				7BA48FAC1DD77FC3008BDE19 /* OMGError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		7BA48FAA1DD77FAD008BDE19 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				7BA48FAF1DD77FCE008BDE19 /* BasicErrorSpec.swift */,
+				7B29F3EB1DD8D911008EA836 /* DeserializationErrorSpec.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		7BA48FBB1DD8CBA0008BDE19 /* TestImages */ = {
+			isa = PBXGroup;
+			children = (
+				7B29F3EF1DD8DF90008EA836 /* apple.png */,
+			);
+			path = TestImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -172,6 +273,7 @@
 					};
 					7BA48F721DD774BF008BDE19 = {
 						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 7BA48F591DD77364008BDE19;
 					};
@@ -201,9 +303,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA48F681DD77364008BDE19 /* LaunchScreen.storyboard in Resources */,
+				7BA48F9C1DD77D90008BDE19 /* LaunchScreen.storyboard in Resources */,
 				7BA48F651DD77364008BDE19 /* Assets.xcassets in Resources */,
-				7BA48F631DD77364008BDE19 /* Main.storyboard in Resources */,
+				7BA48FB71DD78574008BDE19 /* Fruit.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,6 +313,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7B29F3F01DD8DF90008EA836 /* apple.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,8 +358,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA48F601DD77364008BDE19 /* ViewController.swift in Sources */,
+				7BA48FB91DD78574008BDE19 /* FruitService.swift in Sources */,
+				7BA48FB81DD78574008BDE19 /* Fruit.swift in Sources */,
+				7BA48FAE1DD77FC3008BDE19 /* OMGError.swift in Sources */,
+				7B29F3EA1DD8D906008EA836 /* DeserializationError.swift in Sources */,
+				7BA48FAD1DD77FC3008BDE19 /* BasicError.swift in Sources */,
 				7BA48F5E1DD77364008BDE19 /* AppDelegate.swift in Sources */,
+				7BA48FBA1DD78574008BDE19 /* FruitViewController.swift in Sources */,
+				7B29F3EE1DD8D944008EA836 /* FruitDeserializer.swift in Sources */,
+				7BA48FA31DD77E6D008BDE19 /* HTTPResponseInfo.swift in Sources */,
+				7BA48FA21DD77E6D008BDE19 /* HTTPClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,7 +375,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BA48F761DD774BF008BDE19 /* OMGFruitTests.swift in Sources */,
+				7BA48FA81DD77EC3008BDE19 /* HTTPResponseInfoImplSpec.swift in Sources */,
+				7B29F3EC1DD8D911008EA836 /* DeserializationErrorSpec.swift in Sources */,
+				7BA48F931DD77D4F008BDE19 /* FruitViewControllerSpec.swift in Sources */,
+				7BA48FB01DD77FCE008BDE19 /* BasicErrorSpec.swift in Sources */,
+				7BA48FA71DD77EC3008BDE19 /* HTTPClientSpec.swift in Sources */,
+				7B29F3E81DD8D419008EA836 /* FruitServiceSpec.swift in Sources */,
+				7B29F3F21DD8E21B008EA836 /* FruitDeserializerSpec.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,25 +394,6 @@
 			targetProxy = 7BA48F781DD774BF008BDE19 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		7BA48F611DD77364008BDE19 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BA48F621DD77364008BDE19 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		7BA48F661DD77364008BDE19 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				7BA48F671DD77364008BDE19 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		7BA48F6A1DD77364008BDE19 /* Debug */ = {
@@ -419,6 +517,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -427,6 +526,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jwfriese.OMGFruitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OMGFruit.app/OMGFruit";
 			};
@@ -436,6 +536,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
@@ -477,6 +578,7 @@
 				7BA48F7B1DD774BF008BDE19 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

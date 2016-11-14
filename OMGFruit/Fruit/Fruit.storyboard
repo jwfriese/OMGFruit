@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="dLt-c2-lxV">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Fruit View Controller-->
+        <scene sceneID="y9x-Fm-Fmx">
+            <objects>
+                <viewController storyboardIdentifier="FruitViewController" id="dLt-c2-lxV" customClass="FruitViewController" customModule="OMGFruit" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MWW-wX-h6l"/>
+                        <viewControllerLayoutGuide type="bottom" id="IlS-Gy-6Sd"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="nnm-l9-7Aj">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OMG FRUIT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AIh-Sc-bWf">
+                                <rect key="frame" x="124" y="36" width="127" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eik-Db-XFe">
+                                <rect key="frame" x="64" y="89" width="247" height="213.5"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Get some fruit!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cL7-qZ-h6e">
+                                <rect key="frame" x="130" y="318.5" width="114" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vza-cO-jyU" userLabel="Get Fruit Button">
+                                <rect key="frame" x="144.5" y="371" width="85" height="30"/>
+                                <state key="normal" title="Fruit, please"/>
+                                <connections>
+                                    <action selector="getFruit" destination="dLt-c2-lxV" eventType="touchUpInside" id="djA-z6-y0M"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Vza-cO-jyU" firstAttribute="top" secondItem="cL7-qZ-h6e" secondAttribute="bottom" constant="32" id="CW9-Va-bmG"/>
+                            <constraint firstItem="cL7-qZ-h6e" firstAttribute="centerX" secondItem="eik-Db-XFe" secondAttribute="centerX" id="R05-Kb-Wbv"/>
+                            <constraint firstItem="AIh-Sc-bWf" firstAttribute="centerX" secondItem="nnm-l9-7Aj" secondAttribute="centerX" id="R0y-75-hZr"/>
+                            <constraint firstItem="eik-Db-XFe" firstAttribute="leading" secondItem="nnm-l9-7Aj" secondAttribute="leadingMargin" constant="48" id="aLg-hk-Qwz"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eik-Db-XFe" secondAttribute="trailing" constant="48" id="mRa-xG-Xl9"/>
+                            <constraint firstItem="AIh-Sc-bWf" firstAttribute="top" secondItem="MWW-wX-h6l" secondAttribute="bottom" constant="16" id="n0D-8i-pWU"/>
+                            <constraint firstItem="eik-Db-XFe" firstAttribute="top" secondItem="AIh-Sc-bWf" secondAttribute="bottom" constant="24" id="noc-tq-Ow8"/>
+                            <constraint firstItem="IlS-Gy-6Sd" firstAttribute="top" secondItem="Vza-cO-jyU" secondAttribute="bottom" constant="266" id="oXL-Hg-iQo"/>
+                            <constraint firstItem="cL7-qZ-h6e" firstAttribute="top" secondItem="eik-Db-XFe" secondAttribute="bottom" constant="16" id="qTa-PF-FmB"/>
+                            <constraint firstItem="Vza-cO-jyU" firstAttribute="centerX" secondItem="nnm-l9-7Aj" secondAttribute="centerX" id="qob-Vd-vJd"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="fruitImageView" destination="eik-Db-XFe" id="vTR-nd-tbY"/>
+                        <outlet property="fruitSummaryLabel" destination="cL7-qZ-h6e" id="Nqp-Ob-y5Y"/>
+                        <outlet property="getFruitButton" destination="Vza-cO-jyU" id="dvj-lJ-b8X"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iNO-mZ-abz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="-118"/>
+        </scene>
+    </scenes>
+</document>
