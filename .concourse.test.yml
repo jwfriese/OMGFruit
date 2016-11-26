@@ -1,5 +1,4 @@
 platform: darwin
 
-tags: ["osx-worker"]
 run:
   path: OMGFruit/.concourse.test.sh
