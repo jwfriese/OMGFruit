@@ -7,4 +7,4 @@ run:
   path: bash
   args:
     - "-c"
-    - "cd OMGFruit && ls"
+    - "cd OMGFruit && ./.concourse.test.sh"
