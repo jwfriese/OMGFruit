@@ -4,4 +4,7 @@ inputs:
 - name: OMGFruit
 
 run:
-  path: OMGFruit/.concourse.test.sh
+  path: bash
+  args:
+    - "-c"
+    - "cd OMGFruit && ls"
