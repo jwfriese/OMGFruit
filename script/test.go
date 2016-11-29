@@ -12,19 +12,26 @@ import (
 )
 
 func main() {
-	stdOut := os.Stdout
-	stdErr := os.Stderr
 	programCall := os.Args
-	if len(programCall) < 3 {
-		log.Fatal(errors.New("Usage: ./test <runtime> <device type>"))
+	if len(programCall) < 4 {
+		log.Fatal(errors.New("Usage: ./test <runtime> <device type> <use-xcpretty>"))
 	}
 
 	args := programCall[1:]
 	iosVersion := args[0]
 	deviceVersion := args[1]
+	useXcPrettyArgString := args[2]
+	useXcPretty := true
+	if useXcPrettyArgString == "true" {
+		useXcPretty = true
+	} else if useXcPrettyArgString == "false" {
+		useXcPretty = false
+	} else {
+		log.Fatal(errors.New("Final argument must be either 'true' or 'false'"))
+	}
 
-	testInitReport := fmt.Sprintf("Running OMGFruit unit tests with iOS version '%s' on  device type '%s'\n", iosVersion, deviceVersion)
-	_, err := stdOut.Write([]byte(testInitReport))
+	testInitReport := fmt.Sprintf("Running OMGFruit unit tests with iOS version '%s' on device type '%s' (use xcpretty == %v)\n", iosVersion, deviceVersion, useXcPretty)
+	_, err := os.Stdout.Write([]byte(testInitReport))
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -37,29 +44,38 @@ func main() {
 	iosVersionNumber := strings.Trim(iosVersion, "iOS ")
 	destinationString := fmt.Sprintf("platform=iOS Simulator,OS=%s,name=%s", iosVersionNumber, deviceVersion)
 	unitTestCommand := exec.Command("xcodebuild", "test", "-workspace", "OMGFruit.xcworkspace", "-scheme", "OMGFruit", "-destination", destinationString)
-	xcprettyCommand := exec.Command("xcpretty")
-	xcprettyCommand.Stdin, err = unitTestCommand.StdoutPipe()
-	if err != nil {
-		log.Fatal(err)
-	}
-	xcprettyCommand.Stdout = stdOut
-	xcprettyCommand.Stderr = stdErr
-	err = xcprettyCommand.Start()
-	if err != nil {
-		log.Fatal(err)
+	if useXcPretty {
+		xcprettyCommand := exec.Command("xcpretty")
+		xcprettyCommand.Stdin, err = unitTestCommand.StdoutPipe()
+		if err != nil {
+			log.Fatal(err)
+		}
+		xcprettyCommand.Stdout = os.Stdout
+		xcprettyCommand.Stderr = os.Stderr
+		err = xcprettyCommand.Start()
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		err = unitTestCommand.Run()
+		if err != nil {
+			log.Fatal(err)
+		}
+
+		err = xcprettyCommand.Wait()
+		if err != nil {
+			log.Fatal(err)
+		}
+	} else {
+		unitTestCommand.Stdout = os.Stdout
+		unitTestCommand.Stderr = os.Stderr
+		err = unitTestCommand.Run()
+		if err != nil {
+			log.Fatal(err)
+		}
 	}
 
-	err = unitTestCommand.Run()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	err = xcprettyCommand.Wait()
-	if err != nil {
-		log.Fatal(err)
-	}
-
-	_, err = stdOut.Write([]byte("OMGFruit unit tests passed...\n"))
+	_, err = os.Stdout.Write([]byte("OMGFruit unit tests passed...\n"))
 	if err != nil {
 		log.Fatal(err)
 	}
