@@ -1,6 +1,7 @@
 platform: darwin
 
-inputs: OMGFruit
+inputs:
+- name: OMGFruit
 
 run:
   path: OMGFruit/.concourse.test.sh
