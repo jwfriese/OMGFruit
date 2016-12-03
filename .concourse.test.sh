@@ -1,3 +1,7 @@
+#!/bin/bash
+
+set -e -x
+
 export GOPATH=~
 go get github.com/jwfriese/iossimulator
 go build script/test.go
